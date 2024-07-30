@@ -56,7 +56,7 @@ img {
 
 .content {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 60px;
     padding-top: 120px;
 }
@@ -69,12 +69,11 @@ img {
     font-size: 2.7rem;
     color: #fff;
     font-weight: normal;
-    max-width: 35ch;
     line-height: 1.3;
 }
 
 .content-container p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #9ca3af;
     padding-bottom: 2.5rem;
     max-width: 50ch;
@@ -88,6 +87,16 @@ img {
     padding: 1.25rem 4rem;
     border-radius: .25rem;
     font-size: 1.1rem;
+    border: 1px solid #986dff;
+}
+
+.content-container a:hover {
+    background-color: transparent;
+    border: 1px solid #986dff;
+}
+
+.section-banner img {
+    max-width: 1200px;
 }
 
 .what-me {
@@ -163,8 +172,9 @@ img {
 
 .container-projetos {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
@@ -180,13 +190,20 @@ img {
     margin-bottom: 80px;
 }
 
+
 .project {
     padding: 1.25rem;
-    width: 100%;
     color: #fff;
     cursor: pointer;
+    width: 500px;
     border-radius: 4px;
     transition: .3s;
+    border: 1px solid #9ca3af;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .project:hover {
@@ -194,19 +211,8 @@ img {
 }
 
 .project a {
+    color: #fff;
     color: #986dff;
-}
-
-.project:nth-child(1) {
-    border: 1px solid red;
-}
-
-.project:nth-child(2) {
-    border: 1px solid #00a3ff;
-}
-
-.project:nth-child(3) {
-    border: 1px solid #a6fb98;
 }
 
 .repositorios {
@@ -320,24 +326,37 @@ img {
     color: #986dff;
 }
 
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #986dff;
+    border-radius: 10px;
+}
+
+
 @media (max-width: 800px) {
-    .banner-home {
+    .section-banner {
         display: none;
     }
     .header-container {
         justify-content: center;
+        padding: .875rem 3rem;
     }
     .description-me {
         max-width: 38ch;
     }
     .content-container {
         width: 300px;
+        text-align: center;
     }
     .content-container h1 {
         font-size: 2rem;
     }
     .content-container p {
         font-size: 1.1rem;
+        max-width: 28ch;
     }
     .content-container a {
         padding: 17px 30px;
@@ -360,6 +379,14 @@ img {
     .project {
         justify-content: center;
     }
+    .content-container a:hover {
+        border: none;
+        background-color: #986dff;
+    }
 
     
+}
+
+dd {
+    position: absolute;
 }
